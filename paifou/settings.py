@@ -26,7 +26,7 @@ SECRET_KEY = '-dl8@kwkfsif9%^z668j&k933wy+-y8j_j4c3uac1_9z4&zd1@'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['*.herokuapp.com']
+ALLOWED_HOSTS = ['immense-plains-77625.herokuapp.com']
 
 # Application definition
 
