@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <h2 style="margin-left: 30%;margin-bottom: 50px">个人资料</h2>
+                <hr>
+                <form method="post" action="{% url 'viewCustomer' %}" enctype="multipart/form-data"
+                      style="color: gray;font-family: 宋体;font-weight: lighter">
+                    {% csrf_token %}
+                    <div class="form-group">
+                    <label>ID:{{ current_customer.id }}</label>
+                    </div>
+                    <div class="col-sm-6" style="border: 1px solid;border-width: 0 1px">
+                        <div class="form-group">
+                        <label>账户类型:{{ saler.user }}</label>
+                        </div>
+                        <div class="form-group">
+                        <label>昵称:{{ saler.name }}</label>
+                        </div>
+                        <div class="form-group">
+                        <label>生日:{{ saler.date_of_birth }}</label>
+                        </div>
+                        <div class="form-group">
+                        <label>账号等级:{{ saler.grade }}</label>
+                        </div>
+                        <div class="form-group">
+                        <label>联系方式:{{ saler.contact }}</label>
+                        </div>
+                    </div >
+                    <div class="col-sm-6" style="border: 1px solid;border-width: 0 1px 0 0">
+                        <div class="form-group">
+                    <label>照片</label>
+                        <img src="{{ MEDIA_URL }}{{ saler.photo }}"  class="img-rounded"
+                             style="width: 100px;height: 100px; ">
+                        </div>
+                        <div class="form-group">
+                        <label>个人喜好:{{ saler.major1 }} {{ saler.major2 }} {{ saler.major3 }}</label>
+                        </div>
+                        <div class="form-group">
+                        <label>信用展示:{{ saler.credit }}</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                    <label>个人简介:{{ saler.resume }}</label>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-6">
+                                <input type="button" value="修改" />
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+ 
+{% endblock %}

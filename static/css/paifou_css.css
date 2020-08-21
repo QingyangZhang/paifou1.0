@@ -1,0 +1,153 @@
+header{
+		width: 1200px; height: 100px; 
+		margin-left: auto;margin-right: auto;
+		border: 1px solid;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	text-decoration: underline;
+	color: blue; border-color: black;
+}
+ul{
+	list-style: none;
+}
+header div{
+	float: left;
+}
+#logo{
+	width: 100px; height: 100px; 
+	margin-left: 50px;
+	border: 1px solid ;
+}
+#logo img{
+	width: 100px;height: 100px;overflow: hidden;
+}
+#search{
+	position: absolute;
+	top: 55px; left: 500px;
+	width: 500px; height: 20px;
+	border: 1px solid ;
+}
+.cl {
+	clear: both;
+}
+.content{
+	width: 1200px; height: auto; 
+	margin-left: auto;margin-right: auto;
+	margin-top: 10px;
+	/*border: 1px solid ;*/
+}
+section div{
+	float: left;
+}
+/*左边部分CSS包含分类  Start*/
+.classify{
+	width: 290px;  height: 500px; 
+	border: 1px solid ;
+	
+}
+.classify ul{
+	border: 1px solid ;
+	margin: 0 5px;
+}
+.classify ul li{
+	height: 30px; font-size: 20px;
+	font-weight: 500; text-align: left;
+	margin: 10px 0 10px -40px;
+	border: 1px solid ;
+	border-width: 1px 0;
+}
+.classify ul li:first-child{
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom:20px;
+	text-align: center;
+}
+/*左边部分CSS包含分类  Start*/
+
+/*中间部分CSS包含滚动栏和推荐  Start*/
+.main{
+	width: 700px; height: auto; 
+	/*border: 1px solid ;*/
+}
+.lunbo {
+	width: 670px;
+	height: 400px;
+	margin-left: 15px;
+	position: relative;
+	float: left;
+}
+
+.lunbo img {
+	/*border: 1px solid red;*/
+	position: absolute;
+	width: 670px;
+	height: 400px;
+	border-radius: 5px;
+}
+
+.box {
+	margin-right: 10px;
+	position: relative;
+	top: 350px;
+	left: 500px;
+	z-index: 10;
+}
+
+.box span {
+	display: block;
+	float: left;
+	/*border: 1px solid deepskyblue;*/
+	border-radius: 10px;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	background-color: white;
+	text-align: center;
+}
+/*推荐*/
+.recommend{
+	border: 1px solid;
+	width: 670px;height: 700px;
+	position: relative;
+	float: left;
+	margin: 60px 15px;
+}
+.R_title{
+	background-color: white;
+	position: absolute; display: block;
+	top: -80px;left: 230px;
+	font-size: 50px; font-weight: bolder;
+	font-family: "楷体";
+}
+.recommend div{
+	float: left;
+	width: 200px;height: 300px;
+	border: 1px solid;
+	margin: 30px 0 10px 15px;
+}
+/*中间部分CSS包含滚动栏和推荐  End*/
+
+/*右边部分CSS包含个人中心 Start*/
+.personal{
+	width: 200px; height: 300px; 
+	border: 1px solid ;
+}
+.personal ul li{
+	height: 30px; font-size: 20px;
+	font-weight: 500; text-align: left;
+	margin-left: -40px;
+}
+.personal ul li:first-child{
+	width: 150px;
+	height: 150px;text-align:center;
+	border: 1px solid;
+	border-radius: 150px;
+	line-height: 150px;
+	margin-bottom: 20px;margin-left: -15px;
+	overflow: hidden;
+}
+/*右边部分CSS包含个人中心 End*/

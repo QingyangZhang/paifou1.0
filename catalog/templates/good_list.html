@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% load getSaler %}
+  
+  
+  {%for item in good_list%}
+  {%if forloop.counter|mod == 1%}
+  <div class="container">
+  {%endif%}
+  
+    <div class="col-sm-3">
+    <div class="thumbnail">
+	<img src="{{ MEDIA_URL }}{{ item.photo }}" alt="..." style="width: 240px;height:300px;object-fit:cover;">
+      <div class="caption">
+        <h3>{{item.name}}</h3>
+        <p>{{item.detail}}</p>
+		
+		<p>作者：<a href="{{item.saler|getUrl}}">{{item.saler|getSaler|getAttr:"name"}}</a></p>
+		
+        <p><a href="{{ item.get_absolute_url }}" class="btn btn-primary" role="button">查看详情</a> <a href="#" class="btn btn-default" role="button">不喜欢</a></p>
+      </div>
+    </div>
+  </div>
+  
+  {%if forloop.counter|mod == 0%}
+  </div>
+ {%endif%}
+  {%endfor%}
+  
+  
+  
+  
+
+
+  
+  
+  
+ 
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{#    搜索栏#}
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <div class="form-group" >
+            <input type="text" class="form-control" placeholder="Search" style="width: 400px;display: inline-block" >
+            <button type="submit" class="btn btn-default">
+                <a class="glyphicon glyphicon-search" aria-hidden="true" href="{% url 'goodSearch' %}"></a>
+            </button>
+        </div>
+    </div>
+</div>
+{#    下拉导航栏#}
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"
+                href="#collapseOne">分类<span class="caret"></span></a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-justified">
+                {% for gener in  generList%}
+                  <li style="width: 100px"><a href="#">{{gener}}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{#    商品呈现区域#}
+<div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+{%for item in itemList1 %}
+    <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="..." alt="...">
+          <div class="caption">
+            <h3>Thumbnail label</h3>
+            <p>...</p>
+            <p><a href="#" class="btn btn-primary" role="button">详情</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+          </div>
+        </div>
+    </div>
+{%endfor%}
+      </div>
+      <div class="col-sm-3"></div>
+</div>
+{% endblock %}
